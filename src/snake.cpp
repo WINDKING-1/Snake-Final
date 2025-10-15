@@ -181,7 +181,7 @@ void snakeprinter(SDL_Renderer* renderer ){
 
 void appleeat() {
     if(head->pos_x ==random_x && head->pos_y == random_y){
-        adder(5);
+        adder(2);
         apple();
         cout<<endl;
         cout<<"new Apple Pos \nX="<<random_x<<"\nY="<<random_y<<endl;
@@ -287,7 +287,7 @@ snake s;
         SDL_SetRenderDrawColor(renderer,255,0,0,255);
         SDL_RenderPresent(renderer);
     
-        SDL_Delay(75);
+        SDL_Delay(100);
     }
 
     SDL_DestroyRenderer(renderer);
