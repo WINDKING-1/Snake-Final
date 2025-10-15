@@ -213,6 +213,15 @@ void counterscore(){
     score++;
 } 
 
+bool looselogic(){
+        if (contact()){
+            cout<<"Game Over! Final Score: "<<score<<endl;
+            SDL_Delay(5000);
+            return 1;
+        }else{
+            return 0;
+        }
+    }
 
 };
 
@@ -264,6 +273,11 @@ snake s;
         s.throwwall();
 
         s.appleeat();
+
+        if(s.looselogic()){
+            break;
+        }
+
 
 
         SDL_SetRenderDrawColor(renderer,0,0,0,255);
